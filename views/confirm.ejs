@@ -1,0 +1,75 @@
+
+<%- include('header')%>
+    <!--the wedding form-->
+    <div class=" jumbotron  container-fluid " id="details">
+        <h3 class="text-center">Please Fill the form below</h3>
+        <form action="/confirm" method="POST">
+            <div class="form-group row">
+                <label class ="col-sm-4 col-form-label" for="name">Name</label>
+                <div class="col-sm-5">
+                    <input type="text" required class="form-control" id="name" name = "name" placeholder="Your name">
+                </div>  
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">Are you planning to come ?</div>
+                <div class="col-sm-4">
+                <div class="form-check">
+                    <input required class="form-check-input" type="radio" name="decision" id="yes" value="yes">
+                    <label class="form-check-label" for="yes">
+                    Yes
+                    </label>
+                </div>
+                <div class="form-check">
+                        <input class="form-check-input" type="radio" name="decision" id="no" value="no">
+                        <label class="form-check-label" for="no">
+                        No
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class ="col-sm-4 col-form-label" for="atten">Number of attendees</label>
+                <div class="col-sm-5">
+                    <input type="number" required class="form-control" id="atten" name="count" placeholder="How many of your family are coming?">
+                </div>  
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label" for="food">Food Preferences</label>
+                <div class=" col-sm-5">
+                    <select onchange="otherpref()" class="custom-select" id="food" name="food">
+                        <option value="noFoodPref" selected>None</option>
+                        <option value="vege">Vegetarian</option>
+                        <option value="LacFree">lactoose intolerante</option>
+                        <option value="noMeet">No Meet</option>
+                        <option value="others">others</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-3" id="other">
+                    <input type="text"  class="flow-control"  name="otherfood" placeholder="Other food preferences">
+                </div> 
+            </div>
+            <p class="col-form-label">Are you thinking about ideas for gifts? <a onclick="showIdeas()" href="#" class="text-dark">click here</a> to know what we may need.</p>
+            <div class="form-group row">
+                <label for="gifts" class="col-sm-4 col-form-label" id="giftLables">Gifts ideas </label>
+                <div class=" col-sm-5" id="giftValues">
+                    <select multiple class="custom-select" id="gifts" name="gifts">
+                        <option value="bedsheets">Bed Sheets</option>
+                        <option value="coffemaker">Coffe Maker</option>
+                        <option value="tv">TV</option>
+                        <option value="lamp">Lamp</option>
+                        <option value="dvd">DVD Player</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class ="col-sm-4 col-form-label" for="comments">Any comments?</label>
+                <div class="col-sm-5">
+                    <input type="text" required class="form-control" id="comments" name="comments" placeholder="any comments">
+                </div> 
+            </div>
+            <button class="btn btn-primary btn-lg active" type="submit" name="submit">Confirm</button>
+        </form>
+    </div>
+    <%- include('footer')%>
+
