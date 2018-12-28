@@ -32,7 +32,7 @@ app.post('/confirm', (req, res) => {
         from: 'ahmedmarinawedding@gmail.com',
         to: 'ahmed.khairy.mohammed@gmail.com, marremaj@gmail.com',
        // to:'',
-        subject: 'Sending Email using Node.js',
+        subject: 'New Invitation Response',
         html: htmlmail
       };
     transporter.sendMail(mailOptions, function(error, info){
