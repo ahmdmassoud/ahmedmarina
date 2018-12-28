@@ -35,16 +35,16 @@ app.post('/confirm', (req, res) => {
         subject: 'Sending Email using Node.js',
         html: htmlmail
       };
-      transporter.sendMail(mailOptions, function(error, info){
+    transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);
         } else {
           console.log('Email sent: ' + info.response);
         }
-      });
+      }); 
 
 
-   // res.render('confirm');
+    res.render('thankyou');
 });
 //emails
 var transporter = nodemailer.createTransport({

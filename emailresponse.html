@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-</head>
-<body>
-    <h1>New Invitation response!</h1>
+'<!DOCTYPE html><html><head></head><body><h1>New Invitation response!</h1>
     <h4>Dear Marina and Ahmed, you have recieved a new response from  name , he says decision</h4>
     <h5>also find the rest of his answers as the following:</h5>
     <table style="border: 1px solid black; border-collapse: collapse;">
@@ -18,16 +12,42 @@
             <th style="border: 1px solid black;  border-collapse: collapse;">comments</th>
         </tr>
         <tr>
-            <td style="border: 1px solid black;  border-collapse: collapse;">name</td>
-            <td style="border: 1px solid black; border-collapse: collapse; ">decision</td>
-            <td style="border: 1px solid black;  border-collapse: collapse;">count</td>
-            <td style="border: 1px solid black;  border-collapse: collapse;">food</td>
-            <td style="border: 1px solid black;  border-collapse: collapse;">otherfood</td>
-            <td style="border: 1px solid black;  border-collapse: collapse;">gifts</td>
-            <td style="border: 1px solid black;  border-collapse: collapse;">comments</td>
+            <td style="border: 1px solid black;  border-collapse: collapse;">`{name}`</td>
+            <td style="border: 1px solid black; border-collapse: collapse; ">`{decision}`</td>
+            <td style="border: 1px solid black;  border-collapse: collapse;">`{count}`</td>
+            <td style="border: 1px solid black;  border-collapse: collapse;">`{food}`</td>
+            <td style="border: 1px solid black;  border-collapse: collapse;">`{otherfood}`</td>
+            <td style="border: 1px solid black;  border-collapse: collapse;">`{gifts}`</td>
+            <td style="border: 1px solid black;  border-collapse: collapse;">`{comments}`</td>
         </tr>
     </table>
 
     <h5>I will make sure to keep you updated, if any new responses come!, Have an nice day =)</h5>
 </body>
-</html>
+</html>'
+
+''<!DOCTYPE html><html><head></head><body><h1>New Invitation response!</h1> <h4>Dear Marina and Ahmed, you have recieved a new response from name , he says decision</h4> <h5>also find the rest of his answers as the following:</h5> <table style="border: 1px solid black; border-collapse: collapse;"> <tr> <th style="border: 1px solid black; border-collapse: collapse; ">Name</th> <th style="border: 1px solid black; border-collapse: collapse;">Decision</th> <th style="border: 1px solid black; border-collapse: collapse;">Family count</th> <th style="border: 1px solid black; border-collapse: collapse;">Food requested</th> <th style="border: 1px solid black; border-collapse: collapse;">Other food</th> <th style="border: 1px solid black; border-collapse: collapse;">Gifts</th> <th style="border: 1px solid black; border-collapse: collapse;">comments</th> </tr> <tr> <td style="border: 1px solid black; border-collapse: collapse;">`{name}`</td> <td style="border: 1px solid black; border-collapse: collapse; ">`{decision}`</td> <td style="border: 1px solid black; border-collapse: collapse;">`{count}`</td> <td style="border: 1px solid black; border-collapse: collapse;">`{food}`</td> <td style="border: 1px solid black; border-collapse: collapse;">`{otherfood}`</td> <td style="border: 1px solid black; border-collapse: collapse;">`{gifts}`</td> <td style="border: 1px solid black; border-collapse: collapse;">`{comments}`</td> </tr> </table><h5>I will make sure to keep you updated, if any new responses come!, Have an nice day =)</h5> </body> </html>''
+
+'Dears, You have received a new invitation confirmation from '  + 
+        name + '<h1> he says ' + decision + ' and his family count is ' + count +
+        ' he has the following food requests ' + food +' and the others '  + otherfood + 
+        ' and their comments are ' + comments  +'</h1>'
+
+        <div class="modal" tabindex="-1" role="dialog" id="thankyou">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Thank you</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Thank you for your response, hope to see you there .</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
