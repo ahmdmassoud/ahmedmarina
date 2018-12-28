@@ -3,7 +3,10 @@ const bodyParser = require("body-parser");
 //const path    = require("path");
 var nodemailer = require('nodemailer');
 const app = express();
-const port = 3000;
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
 
 //middlewares
 app.set('view engine', 'ejs');
