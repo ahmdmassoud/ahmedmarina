@@ -4,22 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ahmed&Marina wedding site</title>
-    <script src="wedding.js"></script>
+    <title>Ahmed & Marina wedding</title>
     <link rel="stylesheet" href="wedding.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="flipclock.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CClicker+Script" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body class="text-center ">
+    <div class="page-bg-image reveal scale-in"></div>
+    <div class="overlay-bg-black overlay-opacity"></div>
+    
+    <header class="headernav mb-auto line  ">
+        <div class="inner">
+          <nav class="navbar justify-content-center">
+            <a class="  nav-link text-white link" href="/#details">Wedding details</a>
+            <a class="nav-link text-white link" href="/#location">Wedding location</a>
+            <a class="  nav-link text-white link" href="/confirm">Confirm your attendance</a>
+          </nav>
+        </div>
+      </header>
+
     <!--Scrolling up button-->
     <button onclick="topFunction()" id="UpBtn" title="Go to top">Top</button>
     <!--Navbar -->
-    <div class="container">
-        <nav class="navbar navbar-dark bg-dark">
-            <a class="navbar-brand" href="/">Ahmed and Marina's Wedding</a>
-            <a class="nav-link text-white bg-dark" href="/#details">Wedding details</a>
-            <a class="nav-link text-white bg-dark" href="/#location">Wedding location</a>
+        <div class="cover-container page-info d-flex w-100 h-100 p-3 mx-auto flex-column">
+               
+                <div class="col-md-12 text-white text-center page-info col-transform">
+                  <main role="main" class="inner cover">
+                    <h3 class="cover-heading">WE ARE GETTING MARRIED</h3>
+                    <!-- <img src="images/ring.png" alt="ring"> -->
+                    <p id="names">Marina <img src="images/ring.png"> Ahmed</p>
+                    <div class="container">
+                    </div>
+                  </main>
+                  <div class=' clockstyle clock'>t</div>
 
-            <a class="nav-link text-white bg-dark"  href="/confirm">Confirm your attendance</a>
-        </nav>
+                  <a class="btn  details btn-primary btn-lg " href="#details">More details</a>
+
+                </div>

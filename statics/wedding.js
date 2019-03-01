@@ -1,4 +1,4 @@
- var slideIndex = 1;
+/*var slideIndex = 1;
 showSlides(slideIndex);
 
 
@@ -81,3 +81,19 @@ function otherpref(){
 
     }
 }
+
+
+
+//clock
+//var clock = new FlipClock($('.clock'));
+
+
+ //$('.clock'). FlipClock(3600 * (Math.random()*10)); 
+ var currentdate = new Date();
+ var weddingdate=1564225200000
+ var timediff =  (weddingdate - currentdate)/1000
+ var clock = $('.clock').FlipClock(timediff, {
+    clockFace: 'DailyCounter',
+		countdown: true
+  });
+  

@@ -117,3 +117,99 @@
 #giftLables{
     display: none;
 }
+
+
+/*image background*/
+.page-bg-image {
+  background: url(/images/4.jpg) no-repeat center center;
+  background-size: auto;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  min-height: 700px;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  min-height: 500px;
+  width: 100%;
+  z-index: -250;
+}
+
+.overlay-bg-black{
+  position: fixed;
+  top: 0;
+  height: 100%;
+  min-height: 700px;
+  width: 100%;
+  z-index: 0;
+  background-color: #000;
+}
+.overlay-opacity{
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+#names{
+  font-family: Clicker Script;
+  font-size: 100px;
+}
+
+.page-info{
+  padding-top: 30px;
+  position: relative;
+  min-height: 700px;
+  height: 100%;
+  padding-bottom: 20px;
+
+}
+.line{
+  position: relative;
+}
+
+.link {
+  color:black;
+}
+
+.clockstyle {
+  width: 100px;
+  margin: 0 auto;
+
+}
+
+.container {
+  text-align: center;
+}
+
+.box {
+    background-color: #000000a0;
+    width:50%;
+    margin:0 auto;
+    padding:20px;
+    position: relative;
+    top:300px;
+    
+}
+
+.headernav {
+  background-color:black;
+  border-bottom: 1px solid white;
+}
+
+.details{
+  margin-top:200px;
+  
+}
+
+
+#location{
+  margin:0 auto;
+    padding:20px;
+    position: relative;
+    top:350px;
+}
+
+
+footer {
+  position: relative;
+  top:30px;
+}
