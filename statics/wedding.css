@@ -22,10 +22,9 @@ body, html {
     border-radius: 4px;
 }
   
-#confirmattendance:hover{
-  background-color: rgb(55, 101, 116);
-} 
-
+#UpBtn:hover{
+  background-color: rgb(49, 92, 105);
+}
 #other {
     display: none;
 }
@@ -160,6 +159,13 @@ iframe{
 
 .confirmattendance{
   background-color:rgb(89, 159, 180);
+  border:0;
+}
+.confirmattendance:hover{
+  background-color: rgb(61, 104, 117);
+}
+.confirmattendance:active{
+  background-color: red;
 }
 
 .headernav {
@@ -168,7 +174,14 @@ iframe{
 }
 
 .confirmationbutton {
-  background-color: green;
+  background-color: #008000;
+  border:0;
+}
+.confirmationbutton:hover{
+  background-color:#055705;
+}
+.confirmationbutton:active{
+  background-color: red;
 }
 
 .attend{
@@ -176,3 +189,19 @@ padding:50px;
 }
 
 
+
+
+
+.lang {
+  padding:5px;
+  color:grey;
+}
+.lang:active {
+  color:grey;
+
+}
+.lang:hover {
+  color:white;
+  text-decoration:none;
+
+}

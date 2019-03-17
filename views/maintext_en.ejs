@@ -1,0 +1,31 @@
+<div class="invite">  
+        <img class="invite" src="/images/invitationCroppeden.jpg" alt="pic">
+    </div>
+    <!--the clock -->
+    <div class=" clockbg " id="detailsc">
+         <div class='clock'></div> 
+    </div>
+
+<div class=" box text-center" id="details">
+        <h3> Welcome!</h3>
+        <p> We are happy to announce that we are celebrating our marriage together with friends and family August 27 2019.</p>
+        <p>The event is at Soukan Venekerhon Paviljonki in Espoo at 14:30. </p>
+        <p> We assume you are here because you received our invitation. Then we would kindly ask you to confirm your attendance by clicking the button. We are also happy to receive confirmation by phone or other mean that you’d enjoy.</p>
+        <p>Best regards, Marina and Ahmed</p>
+        <img id="ourphoto" src="/images/us.jpeg" alt="Ahmed&Marina">
+        <br/>
+        <a class="btn btn-primary btn-lg confirmattendance" href="/confirm">Confirm Attendance</a>
+        
+</div> <br/>
+ <!--Map location-->
+ <div class="text-center" id="location">
+        <h4>Finally Here is the place on the map</h4>
+
+
+        <%= data.title %>
+        <% if (lang=="swe") { %>
+            <%-include('maintext_swe')%>
+        <% } %>
+        <% if (lang=="en") { %>
+            <%-include('maintext_en')%>
+        <% } %>

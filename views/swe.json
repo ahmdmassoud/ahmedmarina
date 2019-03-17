@@ -1,0 +1,41 @@
+{
+    "pageHeader":"Ahmed & Marina bröllop",
+    "details_header":"Detaljer",
+    "details_header_url":"/swe#detailsc",
+    "location_header":"Plats",
+    "location_header_url":"/swe#location",
+    "confirm_header":"Bekräfta din närvaro",
+    "confrim_header_url":"/confirm_swe",
+    "top_btn":"topp",
+    "top_btn_title":"Överst på sidan",
+    "logourl":"/swe",
+ 
+    "Main_txt_title":" Välkommen!",
+    "line1":"Vi har den äran att meddela att vi firar inledandet av vårt äktenskap tillsammans med släkt och vänner den 27 Augusti 2019.",
+    "line2":"Tillställningen hålls på Sökö båtklubbs paviljong i Esbo kl. 14:30.",
+    "line3":"Vi antar att ni är här för att ni mottagit vår inbjudan. Då ber vi er vänligen att anmäla er närvaro genom att klicka på knappen nedan. Vi tar också gärna emot anmälan över telefon eller annat medel som känns bäst för er.",
+    "signature": "Vänliga hälsningar, Marina och Ahmed",
+    "pic":"invitationCropped.jpg", 
+    "confirm":"Bekräfta närvaro",
+    "mapheader":"Slutligen Här är platsen på kartan",
+    "largmap":"Visa större karta",
+    "direction":"Få vägbeskrivningar",
+ 
+    "footer_txt":"Ahmed och Marina bröllopswebbsida",
+ 
+    "thankyou_message":"Tack för ditt svar Hoppas vi ses där!",
+ 
+    "form_header":"Var vänlig och fyll i detta formulär",
+    "Q1_come":"Planerar du att komma?",
+    "yes":"Ja",
+    "no":"Nej",
+    "guest_name":"Namn",
+    "guest_Allergies":"Allergier",
+    "add_guest_title":"Lägg till en gäst",
+    "comment_label":"Extra kommentarer och frågor?",
+    "comment_placeholder":"Extra kommentarer",
+    "confirm_button":"Bekräfta"
+ 
+ 
+ 
+ }

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,25 +21,28 @@
     <link rel="stylesheet" href="flipclock.css">
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CClicker+Script" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
-    <title>Ahmed & Marina wedding</title>
+    <title><%= data.pageHeader %></title>
   </head>
   <body>
     <!-- Navigation bar with collapsible button -->
     <!-- documentation: https://getbootstrap.com/docs/4.2/components/navbar/ -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark container-fluid headernav">
-      <a class="navbar-brand" href="/"><span id="names">Marina <img id ="ring" src="images/ring.png" alt="and "> Ahmed</span></a>
+      <a class="navbar-brand" href="<%= data.logourl%>"><span id="names">Marina <img id ="ring" src="images/ring.png" alt="and "> Ahmed</span></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse"  id="navbarNavAltMarkup">
         <div class="navbar-nav nav-fill w-100">
-          <a class="nav-item nav-link navetext" href="/#detailsc">Wedding details <span class="fas fa-info"></span><span class="sr-only">(current)</span> </a>
-            <a class="nav-item nav-link navetext" href="/#location">Wedding location <span class="fas fa-map-marker-alt"></span></a>
-            <a class="nav-item nav-link navetext" href="/confirm">Confirm your attendance <span class="fas fa-check-circle"></span></a>
+            <a class="nav-item nav-link navetext" href="<%= data.details_header_url %>"><%= data.details_header %> <span class="fas fa-info"></span><span class="sr-only">(current)</span> </a>
+            <a class="nav-item nav-link navetext" href="<%= data.location_header_url %>"><%= data.location_header %> <span class="fas fa-map-marker-alt"></span></a>
+            <a class="nav-item nav-link navetext" href="<%= data.confrim_header_url %>"><%= data.confirm_header %> <span class="fas fa-check-circle"></span></a>
+            <a class="lang" href="/"><img src="/images/en.ico" alt="en" >(En)</a>
+            <a class="lang"  href="/swe"><img src="/images/swe.ico" alt="swe" >(SV)</a>
+
           </div>
         </div>
       </nav>
     <!--Scrolling up button-->
-    <button onclick="topFunction()" id="UpBtn" title="Go to top">Top</button>
+    <button onclick="topFunction()" id="UpBtn" title="<%= data.top_btn_title%>"><%= data.top_btn%></button>
       
 

@@ -2,45 +2,46 @@
 <%- include('header')%>
     <!--the wedding form-->
     <div class="  container-fluid  attend">
-        <h3 class="text-center">Please Fill the form below</h3>
+        <h3 class="text-center"><%= data.form_header%></h3>
         <form action="/confirm" method="POST" id="confirmationForm">
             <div class="form-group row">
-                    <div class="col-sm-4">Are you planning to come ?</div>
+                    <div class="col-sm-4"><%= data.Q1_come%></div>
                     <div class="col-sm-4">
                     <div class="custom-control custom-radio custom-control-inline">
                             <input type="radio" id="yes" name="decision" value="Yes" class="custom-control-input">
-                            <label class="custom-control-label" for="yes">Yes</label>
+                            <label class="custom-control-label" for="yes"><%= data.yes%></label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
                             <input type="radio" id="no" name="decision" value = "No" class="custom-control-input">
-                            <label class="custom-control-label" for="no">No</label>
+                            <label class="custom-control-label" for="no"><%= data.no%></label>
                     </div>
                     </div>
             </div>
             <div class="form-group row">
-                <label class ="col-sm-4 col-form-label" for="name">Name</label>
+                <label class ="col-sm-4 col-form-label" for="name"><%= data.guest_name%></label>
                 <div class="col-sm-5">
-                    <input type="text" required class="form-control" id="name" name = "name1" placeholder="Your name">
+                    <input type="text" required class="form-control" id="name" name = "name1" placeholder="<%= data.guest_name%>">
                 </div>  
             </div>
             
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="food">Allergies</label>
-                <div class=" col-sm-5">
-                    <input type="text"  class="form-control" id="food" name="food1" placeholder="Food allergies">
-                </div>
+                    <label class="col-sm-4 col-form-label" for="food"><%= data.guest_Allergies%></label>
+                    <div class=" col-sm-5">
+                            <input type="text"  class="form-control" id="food" name="food1" placeholder="<%= data.guest_Allergies%>">
+                    </div>
+
 
             </div> <br/>
-            <a id="addguest" class="btn btn-light" onclick="addnewguest()" title="Add another guest"><i class="fas fa-user"></i><i class="fas fa-plus"></i> </a> <br/><br>
-
+                <a id="addguest" class="btn btn-light" onclick="addnewguest()" title="<%= data.add_guest_title%>"><i class="fas fa-user"></i><i class="fas fa-plus"></i> </a> <br/><br>
             <div class="form-group row">
-                <label class ="col-sm-4 col-form-label" for="comments">Do you have any comments/Questions?</label>
+                <label class ="col-sm-4 col-form-label" for="comments"><%= data.comment_label%></label>
                 <div class="col-sm-5">
-                    <textarea  required class="form-control" id="comments" name="comments" placeholder="any comments"></textarea>
+                        <textarea  required class="form-control" id="comments" name="comments" placeholder="<%= data.comment_placeholder%>"></textarea>
                 </div> 
+
             </div>
             <input type="hidden" id="count" name="count" value="1">
-            <button class="btn btn-primary btn-lg confirmationbutton" type="submit" name="submit">Confirm</button>
+                <button class="btn btn-primary btn-lg confirmationbutton" type="submit" name="submit"><%= data.confirm_button%></button>
         </form>
     </div>
 

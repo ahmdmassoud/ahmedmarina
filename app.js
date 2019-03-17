@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 //const path    = require("path");
 const nodemailer = require('nodemailer');
 const app = express();
+const fs = require('fs');
+
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
@@ -15,8 +17,26 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //routes
-app.get('/', (req, res) => res.render('index'));
-app.get('/confirm', (req, res) => res.render('confirm'));
+let enData = fs.readFileSync('views/en.json');  
+let sweData = fs.readFileSync('views/swe.json');  
+let enjson = JSON.parse(enData); 
+let swejson = JSON.parse(sweData); 
+
+
+app.get('/', (req, res) => {
+  res.render('index', {lang:"en", data: enjson})
+});
+app.get('/swe', (req, res) => {
+  res.render('index',{lang:"swe", data: swejson})
+  
+});
+app.get('/confirm', (req, res) => {
+  res.render('confirm', {lang:"en", data: enjson})
+  
+});
+app.get('/confirm_swe', (req, res) => {
+  res.render('confirm', {lang: "swe", data: swejson})
+});
 
 app.post('/confirm', (req, res) => {
     let count = req.body.count;
@@ -61,6 +81,7 @@ app.post('/confirm', (req, res) => {
         from: 'ahmedmarinawedding@gmail.com',
         to: 'ahmed.khairy.mohammed@gmail.com, marremaj@gmail.com',
         //to: 'ahmed.khairy.mohammed@gmail.com',
+
         subject: 'New Invitation Response',
         html: htmlmail
       };

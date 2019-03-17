@@ -1,0 +1,41 @@
+{
+   "pageHeader":"Ahmed & Marina wedding",
+   "details_header":"Wedding details",
+   "details_header_url":"/#detailsc",
+   "location_header":"Wedding location",
+   "location_header_url":"/#location",
+   "confirm_header":"Confirm your attendance",
+   "confrim_header_url":"/confirm",
+   "top_btn":"top",
+   "top_btn_title":"Top of the page",
+   "logourl":"/",
+
+   "Main_txt_title":" Welcome!",
+   "line1":"We are happy to announce that we are celebrating our marriage together with friends and family August 27th 2019.",
+   "line2":"The event is at Soukan Venekerhon Paviljonki in Espoo at 14:30.",
+   "line3":"We assume you are here because you received our invitation. Then we would kindly ask you to confirm your attendance by clicking the button. We are also happy to receive confirmation by phone or other mean that you’d enjoy.",
+   "signature": "Best regards, Marina and Ahmed",
+   "pic":"invitationCroppeden.jpg", 
+   "confirm":"Confirm Attendance",
+   "mapheader":"Finally Here is the place on the map",
+   "largmap":"View Larger Map",
+   "direction":"Get Directions",
+
+   "footer_txt":"Ahmed and Marina's Wedding website",
+
+   "thankyou_message":"Thank you for your response Hope to see you there!",
+
+   "form_header":"Please Fill the form below",
+   "Q1_come":"Are you planning to come ?",
+   "yes":"Yes",
+   "no":"No",
+   "guest_name":"Name",
+   "guest_Allergies":"Allergies",
+   "add_guest_title":"Add another guest",
+   "comment_label":"Do you have any comments/Questions?",
+   "comment_placeholder":"Extra comments",
+   "confirm_button":"Confirm"
+    
+
+
+}

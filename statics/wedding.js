@@ -101,7 +101,7 @@ function topFunction() {
 var n = 1; 
   function addnewguest(){
     ++n ; 
-    $( `<div class=\"form-group row\"><label class =\"col-sm-4 col-form-label\" for=\"name\">Name(${n})</label><div class=\"col-sm-5\"><input type=\"text\" required class=\"form-control\" id=\"name${n}\" name = \"name${n}\" placeholder=\"Geust ${n} name\"></div></div><div class=\"form-group row\"><label class=\"col-sm-4 col-form-label\" for=\"food\">Allergies(${n})</label><div class=\" col-sm-5\"><input type=\"text\" class=\"form-control\" id=\"food${n}\" name=\"food${n}\" placeholder=\"Guest ${n} food allergies\"></div></div><br/>` ).insertBefore( "#addguest" );
+    $( `<div class=\"form-group row\"><label class =\"col-sm-4 col-form-label\" for=\"name\">Name(${n})</label><div class=\"col-sm-5\"><input type=\"text\" required class=\"form-control\" id=\"name${n}\" name = \"name${n}\" placeholder=\"Guest ${n} name\"></div></div><div class=\"form-group row\"><label class=\"col-sm-4 col-form-label\" for=\"food\">Allergies(${n})</label><div class=\" col-sm-5\"><input type=\"text\"  class=\"form-control\" id=\"food${n}\" name=\"food${n}\" placeholder=\"Guest ${n} food allergies\"></div></div><br/>` ).insertBefore( "#addguest" );
     $(`#count`).val(`${n}`)
   }
 
