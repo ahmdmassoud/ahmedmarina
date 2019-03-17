@@ -1,91 +1,11 @@
 * {box-sizing:border-box}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color:#eeebe2;
 
 }
-
-.act {
-    display: block;
-  }
-  
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-#map {
-    height: 400px;  /* The height is 400 pixels */
-    width: 100%;  /* The width is the width of the web page */
-   }
-
-   
+ 
 #UpBtn {
     display: none;
     position: fixed;
@@ -95,16 +15,16 @@
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: red;
+    background-color: rgb(89, 159, 180);
     color: white;
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
 }
   
- #Uptn:hover {
-    background-color: #555;
-}   
+#confirmattendance:hover{
+  background-color: rgb(55, 101, 116);
+} 
 
 #other {
     display: none;
@@ -118,46 +38,38 @@
     display: none;
 }
 
+#ourphoto{
+  height: 225px;
+  width: 300px;
+  padding:20px;
+}
+.
 
-/*image background*/
-.page-bg-image {
-  background: url(/images/4.jpg) no-repeat center center;
-  background-size: auto;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  min-height: 700px;
-  position: fixed;
-  top: 0;
-  height: 100%;
-  min-height: 500px;
-  width: 100%;
-  z-index: -250;
-}
-
-.overlay-bg-black{
-  position: fixed;
-  top: 0;
-  height: 100%;
-  min-height: 700px;
-  width: 100%;
-  z-index: 0;
-  background-color: #000;
-}
-.overlay-opacity{
-  filter: alpha(opacity=50);
-  opacity: 0.5;
-}
 
 #names{
   font-family: Clicker Script;
-  font-size: 100px;
+  font-size: 6vw;
 }
+#ring {
+  height: 37px;
+  width: 50px;
+}
+
+.invite{
+  width: 100%;
+  padding:0px;
+  margin:0px;
+
+}
+ 
+.navetext{
+  font-size: 15px;
+}
+
 
 .page-info{
   padding-top: 30px;
   position: relative;
-  min-height: 700px;
   height: 100%;
   padding-bottom: 20px;
 
@@ -170,46 +82,77 @@
   color:black;
 }
 
-.clockstyle {
-  width: 100px;
-  margin: 0 auto;
-
-}
-
-.container {
-  text-align: center;
-}
-
+/*Details class*/
 .box {
-    background-color: #000000a0;
-    width:50%;
-    margin:0 auto;
-    padding:20px;
-    position: relative;
-    top:300px;
-    
+    background-color: #eeebe2;
+    width:100%;
+    margin:auto;
+    padding-bottom: 6px; 
+    padding:10px;
+}
+.box p {
+  padding-left:15%;
+  padding-right: 15%;
+}
+
+#location{
+  margin:0;
+  background-color:#eeebe2;
+  width:100%;
+}
+.sticky{
+  width: 100%;
+  background-color:#eeebe2;
+ 
+}
+.clockbg {
+  background-color: #aadfe6;
+  width: 100%;
+  padding-top: 0px;
+  margin-top:0px;
+  border-top:0px;
+}
+/*Controlling the size of the clock on phones*/
+@media only screen and (max-width: 768px) {
+  .clock{
+    zoom: 0.34;
+  }
+
+  iframe{
+    width:350px;
+    height:350px;
+  }
+}
+.clock{
+  padding:5%;
+  width: 100%;
+  
+}
+
+iframe{
+  width:78vw ;
+  height:29vw;
+}
+.confirmattendance{
+  background-color:rgb(89, 159, 180);
 }
 
 .headernav {
   background-color:black;
-  border-bottom: 1px solid white;
+  border-bottom: 3px solid white;
 }
 
-.details{
-  margin-top:200px;
-  
+.confirmationbutton {
+  background-color: green;
 }
 
-
-#location{
-  margin:0 auto;
-    padding:20px;
-    position: relative;
-    top:350px;
+.attend{
+padding:50px;
 }
 
-
-footer {
-  position: relative;
-  top:30px;
+#bye img{
+  margin:auto;
+  width:60vw;
+  height: 30vw;
+  padding-left: 15%;
 }

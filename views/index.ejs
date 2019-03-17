@@ -1,48 +1,28 @@
 
 <%- include('header')%>
-   
-    <!-- Slideshow container --> <!--
-    <div class="slideshow-container">
-        <div class="mySlides act">
-            <img src="images/invitationCropped.jpg" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <img src="images/portrait.jpg" style="width:100%">
-        </div>
-        <div class="mySlides">
-            <img src="images/sea.jpg" style="width:100%">
-        </div> -->
-        <!-- Next and previous buttons --> <!-- 
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    </div>
-    <br> -->
-    <!-- The dots/circles --> <!--
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>-->
-    <!--About the wedding--> 
- 
-    <div class="  text-white box  text-center" id="details">
-        <h3>Welcome to our wedding</h3>
-        <p class="mb-1">Hi, This is Ahmed and Marina, we are assuming you are here because you received our invitation
-            to our wedding! Glad to see you here, we are delighted to invite you to our wedding on the 27<sup>th</sup> of July 2019, the 
-        event will take place at soukan venekerhon paviljonki which is at Soukanlahdentie 15, 02360 Espoo, we will start at 2pm but first things first, we would like you to 
-        confirm your attendance for the wedding by clicking on the blue button below. Thank you.
-        </p>
-        <br/>
-        <a class="btn btn-primary btn-lg active" href="/confirm">Confirm Attendance</a>
-    </div>
+   <div class="invite">  
+       <img class="invite" src="/images/invitationCropped.jpg" alt="pic">
+   </div>
+   <!--the clock -->
+   <div class=" clockbg " id="detailsc">
+        <div class='clock'></div> 
+   </div>
+    <div class=" box text-center" id="details">
+            <h3> Welcome!</h3>
+            <p> We are happy to announce that we are celebrating our marriage together with friends and family August 27<sup>th</sup> 2019.</p>
+            <p>The event is at Soukan Venekerhon Paviljonki in Espoo at 14:30. </p>
+            <p> We assume you are here because you received our invitation. Then we would kindly ask you to confirm your attendance by clicking the button. We are also happy to receive confirmation by phone or other mean that you’d enjoy.</p>
+            <p>Best regards, Marina and Ahmed</p>
+            <img id="ourphoto" src="/images/us.jpeg" alt="Ahmed&Marina">
+            <br/>
+            <a class="btn btn-primary btn-lg confirmattendance" href="/confirm">Confirm Attendance</a>
+            
+    </div> <br/>
     <!--Map location-->
-    <div class=" jumbotron jumbotron-fluid container-fluid text-center" id="location">
+    <div class="text-center" id="location">
         <h4>Finally Here is the place on the map</h4>
-        <iframe width="800" height="500" frameborder="0" src="https://www.bing.com/maps/embed?h=500&w=800&cp=60.13517407955635~24.64960246703475&lvl=17&typ=d&sty=h&src=SHELL&FORM=MBEDV8" scrolling="no">
+        <iframe   src="https://www.bing.com/maps/embed?h=400&w=1100&cp=60.13517407955635~24.64960246703475&lvl=17&typ=d&sty=h&src=SHELL&FORM=MBEDV8">
         </iframe>
-        <div   class="container-fluid text-center" style="white-space: nowrap; text-align: center; width: 800px; padding: 6px 0;">
-           <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=60.13517407955635~24.64960246703475&amp;sty=h&amp;lvl=17&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
-           <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=60.13517407955635~24.64960246703475&amp;sty=h&amp;lvl=17&amp;rtp=~pos.60.13517407955635_24.64960246703475____&amp;FORM=MBEDLD">Get Directions</a>
-       </div>
+
     </div>
     <%- include('footer')%>

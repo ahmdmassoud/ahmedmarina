@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 //const path    = require("path");
-var nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 const app = express();
 let port = process.env.PORT;
 if (port == null || port == "") {
@@ -19,35 +19,66 @@ app.get('/', (req, res) => res.render('index'));
 app.get('/confirm', (req, res) => res.render('confirm'));
 
 app.post('/confirm', (req, res) => {
-    // name, decision, count, food, otherfood, gifts, comments, submit
-    var name = req.body.name;
-    var decision = req.body.decision;
-    var count = req.body.count;
-    var food = req.body.food;
-    var otherfood = req.body.otherfood;
-    var gifts = req.body.gifts;
-    var comments = req.body.comments;
-    var htmlmail = `<!DOCTYPE html><html><head></head><body><h1>New Invitation response!</h1> <h4>Dear Marina and Ahmed, you have recieved a new response from ${name} , he says ${decision}</h4> <h5>also find the rest of his answers as the following:</h5> <table style="border: 1px solid black; border-collapse: collapse;"> <tr> <th style="border: 1px solid black; border-collapse: collapse; ">Name</th> <th style="border: 1px solid black; border-collapse: collapse;">Decision</th> <th style="border: 1px solid black; border-collapse: collapse;">Family count</th> <th style="border: 1px solid black; border-collapse: collapse;">Food requested</th> <th style="border: 1px solid black; border-collapse: collapse;">Other food</th> <th style="border: 1px solid black; border-collapse: collapse;">Gifts</th> <th style="border: 1px solid black; border-collapse: collapse;">comments</th> </tr> <tr> <td style="border: 1px solid black; border-collapse: collapse;">${name}</td> <td style="border: 1px solid black; border-collapse: collapse; ">${decision}</td> <td style="border: 1px solid black; border-collapse: collapse;">${count}</td> <td style="border: 1px solid black; border-collapse: collapse;">${food}</td> <td style="border: 1px solid black; border-collapse: collapse;">${otherfood}</td> <td style="border: 1px solid black; border-collapse: collapse;">${gifts}</td> <td style="border: 1px solid black; border-collapse: collapse;">${comments}</td> </tr> </table><h5>I will make sure to keep you updated, if any new responses come!, Have an nice day =)</h5> </body> </html>`
-    var mailOptions = {
+    let count = req.body.count;
+    let decision = req.body.decision;
+    let comments = req.body.comments;
+    let names = []; 
+    let foods = [];
+    for (let i = 1; i < count+1; i++) {
+      var name = "name" + i; 
+      var food = "food" + i;
+      names.push(req.body[name]);
+      foods.push(req.body[food]);
+       
+    }
+     
+    let htmlmail = `<!DOCTYPE html><html>
+    <head><title>new confirmation</title></head>
+    <body>
+      <h1>New Invitation response!</h1> 
+      <h4>Dear Marina and Ahmed, you have recieved a new response from ${names[0]} , s/he says ${decision} ` ;
+      if(decision == 'Yes') 
+          {
+            htmlmail = htmlmail + ` and s/he will come with ${count-1} of his/her family</h4> `;
+            htmlmail = htmlmail + `<h5>also find the rest of his/her answers as the following:</h5> 
+            <table style="border: 1px solid black; border-collapse: collapse;"> 
+              <tr> 
+              <th style="border: 1px solid black; border-collapse: collapse; ">Name</th> 
+              <th style="border: 1px solid black; border-collapse: collapse;">Allergies</th> </tr>`; 
+              for (let j = 0; j < count; j++) {
+               htmlmail =  htmlmail + `<tr> 
+                            <td style="border: 1px solid black; border-collapse: collapse;">${names[j]}</td> 
+                            <td style="border: 1px solid black; border-collapse: collapse;">${foods[j]}</td> 
+                           </tr> 
+                       `;
+                
+              }
+          }
+      
+      let emailending =  `</table><p>Finally they left you a comment: ${comments}</p><h5> I will make sure to keep you updated, if any new responses come!, Have an nice day =)</h5> </body> </html>`;
+      htmlmail +=emailending;
+    let mailOptions = {
         from: 'ahmedmarinawedding@gmail.com',
         to: 'ahmed.khairy.mohammed@gmail.com, marremaj@gmail.com',
+        //to: 'ahmed.khairy.mohammed@gmail.com',
+
        // to:'',
         subject: 'New Invitation Response',
         html: htmlmail
       };
-    transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-          console.log(error);
-        } else {
-          console.log('Email sent: ' + info.response);
-        }
-      }); 
+    // transporter.sendMail(mailOptions, function(error, info){
+    //     if (error) {
+    //       console.log(error);
+    //     } else {
+    //       console.log('Email sent');
+    //     }
+    //   }); 
 
 
     res.render('thankyou');
 });
 //emails
-var transporter = nodemailer.createTransport({
+let transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'ahmedmarinawedding@gmail.com',
