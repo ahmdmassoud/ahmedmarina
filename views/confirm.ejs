@@ -1,6 +1,6 @@
 
 <%- include('header')%>
-    <!--the wedding form-->
+    <!--the wedding form--> <br />
     <div class="  container-fluid  attend">
         <h3 class="text-center"><%= data.form_header%></h3>
         <form action="/confirm" method="POST" id="confirmationForm">
@@ -8,7 +8,7 @@
                     <div class="col-sm-4"><%= data.Q1_come%></div>
                     <div class="col-sm-4">
                     <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="yes" name="decision" value="Yes" class="custom-control-input">
+                            <input type="radio" id="yes" name="decision" value="Yes" required class="custom-control-input">
                             <label class="custom-control-label" for="yes"><%= data.yes%></label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
@@ -41,7 +41,7 @@
 
             </div>
             <input type="hidden" id="count" name="count" value="1">
-                <button class="btn btn-primary btn-lg confirmationbutton" type="submit" name="submit"><%= data.confirm_button%></button>
+                <button class="btn btn-success btn-lg confirmationbutton" type="submit" name="submit"><%= data.confirm_button%></button>
         </form>
     </div>
 

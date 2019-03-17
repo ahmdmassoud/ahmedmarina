@@ -93,8 +93,10 @@ app.post('/confirm', (req, res) => {
         }
       }); 
 
+  
+      res.render('thankyou', {data:enjson});
 
-    res.render('thankyou');
+    
 });
 //emails
 let transporter = nodemailer.createTransport({
