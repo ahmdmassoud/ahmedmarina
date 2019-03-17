@@ -61,18 +61,16 @@ app.post('/confirm', (req, res) => {
         from: 'ahmedmarinawedding@gmail.com',
         to: 'ahmed.khairy.mohammed@gmail.com, marremaj@gmail.com',
         //to: 'ahmed.khairy.mohammed@gmail.com',
-
-       // to:'',
         subject: 'New Invitation Response',
         html: htmlmail
       };
-    // transporter.sendMail(mailOptions, function(error, info){
-    //     if (error) {
-    //       console.log(error);
-    //     } else {
-    //       console.log('Email sent');
-    //     }
-    //   }); 
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent');
+        }
+      }); 
 
 
     res.render('thankyou');

@@ -112,6 +112,21 @@ body, html {
   margin-top:0px;
   border-top:0px;
 }
+
+
+iframe{
+  width:71vw ;
+  height:28vw;
+}
+#mobileiframe{
+  display: none;
+}
+#bye img{
+  margin:auto;
+  width:60vw;
+  height: 30vw;
+  padding-left: 15%;
+}
 /*Controlling the size of the clock on phones*/
 @media only screen and (max-width: 768px) {
   .clock{
@@ -122,6 +137,19 @@ body, html {
     width:350px;
     height:350px;
   }
+  #mobileiframe{
+    display: block;
+    margin:auto;
+    overflow: hidden;
+  }
+  #bigiframe{
+    display: none;
+  }
+
+  #gifimg{
+  width:80vw;
+  height: 40vw;
+  }
 }
 .clock{
   padding:5%;
@@ -129,10 +157,7 @@ body, html {
   
 }
 
-iframe{
-  width:78vw ;
-  height:29vw;
-}
+
 .confirmattendance{
   background-color:rgb(89, 159, 180);
 }
@@ -150,9 +175,4 @@ iframe{
 padding:50px;
 }
 
-#bye img{
-  margin:auto;
-  width:60vw;
-  height: 30vw;
-  padding-left: 15%;
-}
+
