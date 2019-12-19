@@ -7,4 +7,4 @@ In this site, I used Nodejs with express.
 I also learnt how to make a bialingual website (English and Swedish) 
 I hosted the website on Heroku and connected it to a domain 
 at the moment the website in not online anymore but here is a screenshot of how it looked like
-
+![Sample](weddingwebsite.PNG)
